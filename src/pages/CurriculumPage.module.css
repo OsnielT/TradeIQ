@@ -1,0 +1,397 @@
+.page {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 24px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Progress summary ── */
+
+.progressSummary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 20px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.progressStat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.progressStatValue {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.progressStatLabel {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.progressDivider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border);
+  flex-shrink: 0;
+}
+
+.progressBarWrapper {
+  flex: 1;
+  min-width: 200px;
+}
+
+.progressBarLabel {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.progressBar {
+  height: 6px;
+  background-color: var(--surface2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+/* ── Module grid ── */
+
+.moduleGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .moduleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Module card ── */
+
+.moduleCard {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleCardLocked {
+  opacity: 0.55;
+}
+
+.moduleCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 16px 12px;
+  border-left: 3px solid var(--border);
+}
+
+.moduleCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.moduleIcon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.moduleName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.moduleDescription {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+.moduleLockBadge {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.moduleProgress {
+  padding: 0 16px 12px;
+}
+
+.moduleProgressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.moduleProgressCount {
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.moduleProgressBar {
+  height: 4px;
+  background-color: var(--surface2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.moduleProgressFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+/* ── Lesson list ── */
+
+.lessonList {
+  flex: 1;
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  list-style: none;
+}
+
+.lessonRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color 0.1s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.lessonRow:hover {
+  background-color: var(--surface2);
+}
+
+.lessonRowLocked {
+  cursor: default;
+  pointer-events: none;
+}
+
+.lessonRowLocked:hover {
+  background-color: transparent;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusLocked {
+  background-color: var(--border);
+}
+
+.statusAvailable {
+  background-color: var(--muted);
+}
+
+.statusInProgress {
+  background-color: var(--accent2);
+}
+
+.statusComplete {
+  background-color: var(--accent);
+}
+
+.lessonTitle {
+  font-size: 12px;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lessonTitleLocked {
+  color: var(--muted);
+}
+
+.lessonMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.lessonTime {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.quizBadge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: var(--radius-pill);
+}
+
+.quizPass {
+  color: var(--accent);
+  background-color: rgba(0, 229, 160, 0.1);
+}
+
+.quizFail {
+  color: var(--warn);
+  background-color: rgba(255, 107, 53, 0.1);
+}
+
+/* ── Module quiz footer ── */
+
+.moduleFooter {
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.moduleQuizLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.moduleQuizAction {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  color: var(--text);
+}
+
+.moduleQuizAction:hover {
+  border-color: var(--accent2);
+  color: var(--accent2);
+}
+
+.moduleQuizScore {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.moduleQuizScorePass {
+  color: var(--accent);
+}
+
+.moduleQuizScoreFail {
+  color: var(--warn);
+}
+
+/* ── Final exam CTA ── */
+
+.finalExam {
+  padding: 24px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.finalExamLocked {
+  opacity: 0.5;
+}
+
+.finalExamText {
+  flex: 1;
+}
+
+.finalExamTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.finalExamDesc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.finalExamCta {
+  padding: 11px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.finalExamCtaUnlocked {
+  background-color: var(--gold);
+  color: #0a0c0f;
+  transition: opacity 0.15s;
+}
+
+.finalExamCtaUnlocked:hover {
+  opacity: 0.9;
+}
+
+.finalExamCtaLocked {
+  background-color: var(--surface2);
+  color: var(--muted);
+  cursor: not-allowed;
+  border: 1px solid var(--border);
+}

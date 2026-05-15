@@ -1,0 +1,26 @@
+:root {
+  /* Colors */
+  --bg: #0a0c0f;
+  --surface: #111318;
+  --surface2: #181c22;
+  --border: #1e2530;
+  --accent: #00e5a0;
+  --accent2: #3b7fff;
+  --warn: #ff6b35;
+  --red: #ff3d5a;
+  --text: #e2e8f0;
+  --muted: #5a6478;
+  --gold: #f5c542;
+
+  /* Typography */
+  --font-ui: 'Syne', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --header-height: 56px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-pill: 2px;
+}
