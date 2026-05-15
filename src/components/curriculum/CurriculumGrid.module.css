@@ -1,0 +1,112 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── 2-column grid on wide, 1-column on narrow ── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 780px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Final exam banner ── */
+
+.finalExam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.finalExamLocked {
+  opacity: 0.5;
+}
+
+.finalLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.finalIcon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.finalTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.finalDesc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.finalRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.finalScore {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.finalScorePass {
+  color: var(--accent);
+}
+
+.finalScoreWarn {
+  color: var(--warn);
+}
+
+.finalBtn {
+  padding: 11px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--font-ui);
+  transition: opacity 0.15s;
+}
+
+.finalBtnActive {
+  background-color: var(--gold);
+  color: #0a0c0f;
+}
+
+.finalBtnActive:hover {
+  opacity: 0.9;
+}
+
+.finalBtnDisabled {
+  background-color: var(--surface2);
+  color: var(--muted);
+  cursor: not-allowed;
+  border: 1px solid var(--border);
+}

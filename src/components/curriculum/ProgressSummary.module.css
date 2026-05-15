@@ -1,0 +1,94 @@
+.summary {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.statValue {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.statDenom {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.statLabel {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.streak {
+  font-size: 14px;
+}
+
+.xp {
+  color: var(--gold);
+}
+
+.passGood {
+  color: var(--accent);
+}
+
+.passLow {
+  color: var(--warn);
+}
+
+.divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border);
+  flex-shrink: 0;
+}
+
+.barSection {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.barLabel {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.bar {
+  height: 6px;
+  background-color: var(--surface2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}

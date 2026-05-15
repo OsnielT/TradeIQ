@@ -1,0 +1,129 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 4px;
+  border-radius: var(--radius-sm);
+  list-style: none;
+  transition: background-color 0.1s;
+}
+
+.row:not(.rowLocked):hover {
+  background-color: var(--surface2);
+}
+
+.rowLocked {
+  opacity: 0.45;
+}
+
+/* ── Status icon ── */
+
+.icon {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+
+.icon_locked {
+  color: var(--border);
+}
+
+.icon_available {
+  color: var(--muted);
+}
+
+.icon_in_progress {
+  color: var(--accent2);
+}
+
+.icon_complete {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ── Title ── */
+
+.title {
+  flex: 1;
+  font-size: 12px;
+  color: var(--text);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.titleLocked {
+  color: var(--muted);
+}
+
+/* ── Meta (time + quiz badge) ── */
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.time {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.quizBadge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: var(--radius-pill);
+}
+
+.quizPass {
+  color: var(--accent);
+  background-color: rgba(0, 229, 160, 0.1);
+}
+
+.quizWarn {
+  color: var(--warn);
+  background-color: rgba(255, 107, 53, 0.1);
+}
+
+/* ── Action button ── */
+
+.action {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 0.12s, border-color 0.12s;
+}
+
+.actionGo {
+  background-color: var(--accent2);
+  color: #fff;
+  border-color: var(--accent2);
+}
+
+.actionGo:hover {
+  opacity: 0.85;
+}
+
+.actionReview {
+  background-color: transparent;
+  color: var(--muted);
+  border-color: var(--border);
+}
+
+.actionReview:hover {
+  border-color: var(--muted);
+  color: var(--text);
+}
