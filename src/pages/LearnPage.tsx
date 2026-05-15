@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext.tsx';
 import { curriculum } from '../data/curriculum.ts';
+import { ChartPanel } from '../components/chart/ChartPanel.tsx';
 import styles from './LearnPage.module.css';
 
 export default function LearnPage() {
@@ -25,23 +26,13 @@ export default function LearnPage() {
 
   return (
     <div className={styles.page}>
-      {/* ── Chart panel ── */}
-      <div className={styles.chartPanel}>
-        {activeLesson && (
-          <div className={styles.lessonBanner}>
-            <span className={styles.lessonBannerText}>{activeLesson.title}</span>
-            <span className={styles.lessonBannerModule}>{activeMod?.title}</span>
-          </div>
-        )}
-        <div className={styles.chartPlaceholder}>
-          <span className={styles.chartPlaceholderIcon} aria-hidden="true">📊</span>
-          <p className={styles.chartPlaceholderText}>
-            TradingView chart — coming next
-          </p>
-        </div>
-      </div>
+      {/* ── Chart panel (left) ── */}
+      <ChartPanel
+        lessonTitle={activeLesson?.title}
+        moduleName={activeMod?.title}
+      />
 
-      {/* ── Tutor panel ── */}
+      {/* ── Tutor panel (right) ── */}
       <div className={styles.tutorPanel} aria-label="AI Tutor">
         <div className={styles.tutorHeader}>
           <div className={styles.tutorMeta}>

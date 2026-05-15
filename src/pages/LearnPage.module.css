@@ -5,38 +5,6 @@
   overflow: hidden;
 }
 
-/* ── Chart panel (left) ── */
-
-.chartPanel {
-  flex: 1;
-  min-width: 0;
-  background-color: var(--bg);
-  border-right: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.chartPlaceholder {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: var(--muted);
-}
-
-.chartPlaceholderIcon {
-  font-size: 40px;
-  opacity: 0.4;
-}
-
-.chartPlaceholderText {
-  font-size: 13px;
-  color: var(--muted);
-}
-
 /* ── Tutor panel (right) ── */
 
 .tutorPanel {
@@ -137,27 +105,4 @@
   font-family: var(--font-ui);
   resize: none;
   cursor: not-allowed;
-}
-
-/* ── Lesson banner (when lesson is active) ── */
-
-.lessonBanner {
-  padding: 10px 16px;
-  background-color: rgba(59, 127, 255, 0.08);
-  border-bottom: 1px solid rgba(59, 127, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-shrink: 0;
-}
-
-.lessonBannerText {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--accent2);
-}
-
-.lessonBannerModule {
-  font-size: 11px;
-  color: var(--muted);
 }

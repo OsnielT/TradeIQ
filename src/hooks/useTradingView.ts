@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import type { RefObject } from 'react';
 import type { Timeframe } from '../types/index.ts';
 
@@ -43,6 +43,12 @@ const STYLE_MAP: Record<'candlestick' | 'line' | 'bar', string> = {
   bar: '0',
 };
 
+export const DEFAULT_STUDIES = [
+  'MASimple@tv-scriptwiz',
+  'RSI@tv-scriptwiz',
+  'MACD@tv-scriptwiz',
+];
+
 // ---------------------------------------------------------------------------
 // Script loader (idempotent — safe to call multiple times)
 // ---------------------------------------------------------------------------
@@ -81,9 +87,16 @@ export function useTradingView(
   ticker: string,
   timeframe: Timeframe,
   chartType: 'candlestick' | 'line' | 'bar',
-): void {
+  studies: string[] = DEFAULT_STUDIES,
+): { hasError: boolean } {
+  const [hasError, setHasError] = useState(false);
+
+  // Serialize the array so useEffect gets a stable primitive to compare
+  const studiesKey = studies.join(',');
+
   useEffect(() => {
     let cancelled = false;
+    setHasError(false);
 
     async function initWidget() {
       try {
@@ -111,15 +124,12 @@ export function useTradingView(
           allow_symbol_change: false,
           save_image: false,
           withdateranges: true,
-          studies: [
-            'MASimple@tv-scriptuwiz',
-            'RSI@tv-scriptwiz',
-            'MACD@tv-scriptwiz',
-          ],
+          studies: studies.length > 0 ? studies : [],
         });
       } catch (err) {
         if (!cancelled) {
           console.error('[useTradingView] Widget initialization failed:', err);
+          setHasError(true);
         }
       }
     }
@@ -130,6 +140,9 @@ export function useTradingView(
       cancelled = true;
     };
     // containerRef is a stable ref object — intentionally omitted from deps
+    // studiesKey is the serialized form of the studies array
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ticker, timeframe, chartType]);
+  }, [ticker, timeframe, chartType, studiesKey]);
+
+  return { hasError };
 }
