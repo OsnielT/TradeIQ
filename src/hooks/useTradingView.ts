@@ -106,13 +106,23 @@ export function useTradingView(
 
         const container = containerRef.current;
         const TV = window.TradingView;
-        if (!container || !TV) return;
 
-        // Destroy previous widget instance by clearing the container
+        // Guard: container must be in the document after the async gap.
+        // If the component unmounted or React recycled the node, bail out.
+        if (!container || !TV || !document.contains(container)) return;
+
+        // Clear previous widget content first
         container.innerHTML = '';
 
+        // Assign a stable per-render ID so TradingView can locate the element
+        // via container_id (string). This avoids the parentNode null-dereference
+        // that occurs when passing a DOM reference directly and the widget's
+        // internal async callbacks fire after the element is detached.
+        const widgetId = `tv-widget-${Date.now()}`;
+        container.id = widgetId;
+
         new TV.widget({
-          container,
+          container_id: widgetId,
           symbol: normalizeSymbol(ticker),
           interval: INTERVAL_MAP[timeframe],
           style: STYLE_MAP[chartType],
@@ -134,7 +144,7 @@ export function useTradingView(
       }
     }
 
-    initWidget();
+    void initWidget();
 
     return () => {
       cancelled = true;
