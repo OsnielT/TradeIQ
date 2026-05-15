@@ -1,0 +1,77 @@
+.bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+}
+
+/* ── User bubble ── */
+
+.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.userContent {
+  background-color: var(--accent2);
+  color: #fff;
+  padding: 9px 13px;
+  border-radius: 12px 12px 3px 12px;
+  font-size: 13px;
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+/* ── Assistant bubble ── */
+
+.assistant {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.assistantContent {
+  background-color: var(--surface2);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 3px 12px 12px 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  word-break: break-word;
+  border: 1px solid var(--border);
+}
+
+.assistantContent strong {
+  color: var(--warn);
+  font-weight: 700;
+}
+
+/* ── Streaming cursor ── */
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 13px;
+  background-color: var(--accent2);
+  margin-left: 2px;
+  vertical-align: middle;
+  border-radius: 1px;
+  animation: cursorBlink 0.9s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ── Timestamp ── */
+
+.meta {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+  padding: 0 2px;
+}
