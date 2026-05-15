@@ -1,0 +1,78 @@
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s, background-color 0.12s, color 0.12s, opacity 0.12s;
+  font-family: var(--font-ui);
+}
+
+/* No color hint before submission — only border on hover */
+.option:hover:not(:disabled) {
+  border-color: var(--muted);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+/* ── Post-submit states ── */
+
+.correct {
+  border-color: var(--accent);
+  background-color: rgba(0, 229, 160, 0.1);
+  color: var(--accent);
+}
+
+.wrong {
+  border-color: var(--red);
+  background-color: rgba(255, 61, 90, 0.1);
+  color: var(--red);
+}
+
+.dimmed {
+  opacity: 0.38;
+}
+
+/* ── Letter prefix ── */
+
+.letter {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+  min-width: 16px;
+  margin-top: 1px;
+}
+
+.correct .letter {
+  color: var(--accent);
+}
+
+.wrong .letter {
+  color: var(--red);
+}
+
+.option:not(.correct):not(.wrong) .letter {
+  color: var(--muted);
+}
+
+/* ── True/False variant (full-height, centred) ── */
+
+.tf {
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
