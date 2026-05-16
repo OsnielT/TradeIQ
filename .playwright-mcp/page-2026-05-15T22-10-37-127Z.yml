@@ -1,0 +1,43 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TradeIQ" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - navigation "Main navigation" [ref=e7]:
+        - link "Learn" [ref=e8] [cursor=pointer]:
+          - /url: /learn
+        - link "Curriculum" [ref=e9] [cursor=pointer]:
+          - /url: /curriculum
+    - generic [ref=e10]:
+      - combobox "User level" [ref=e11] [cursor=pointer]:
+        - option "Beginner"
+        - option "Intermediate" [selected]
+        - option "Advanced"
+      - generic "10 XP earned" [ref=e12]:
+        - generic [ref=e13]: "10"
+        - generic [ref=e14]: XP
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: How Markets Work — Lesson Quiz
+        - generic [ref=e21]: 1/4
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: Multiple choice
+        - paragraph [ref=e26]: What primarily determines the price of a stock at any given moment?
+        - generic [ref=e27]:
+          - button "A The government sets it each morning" [ref=e28] [cursor=pointer]:
+            - generic [ref=e29]: A
+            - generic [ref=e30]: The government sets it each morning
+          - button "B The balance of buyers and sellers in the market" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]: B
+            - generic [ref=e33]: The balance of buyers and sellers in the market
+          - button "C The company's profit from last year" [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]: C
+            - generic [ref=e36]: The company's profit from last year
+          - button "D The stock exchange decides the fair price" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: D
+            - generic [ref=e39]: The stock exchange decides the fair price
+  - contentinfo [ref=e40]:
+    - paragraph [ref=e41]:
+      - strong [ref=e42]: Educational purposes only.
+      - text: TradeIQ is not a financial advisor. Nothing on this platform constitutes financial, investment, or trading advice. All examples are for educational purposes only. Trading involves significant risk of loss and may not be suitable for all investors.

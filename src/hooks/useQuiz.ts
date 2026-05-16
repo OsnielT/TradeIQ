@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from 'react';
-import Anthropic from '@anthropic-ai/sdk';
+import OpenAI from 'openai';
 import { useApp } from '../context/AppContext.tsx';
+import { AI_PROVIDER } from '../config/aiProvider.ts';
 import type {
   QuizQuestion,
   QuizAnswer,
@@ -10,11 +11,12 @@ import type {
 } from '../types/index.ts';
 
 // ---------------------------------------------------------------------------
-// Anthropic client — lightweight grading calls only (open_answer type)
+// HuggingFace Inference Router client — lightweight grading calls only (open_answer type)
 // ---------------------------------------------------------------------------
 
-const client = new Anthropic({
-  apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY as string,
+const hfClient = new OpenAI({
+  baseURL: AI_PROVIDER.baseURL,
+  apiKey: import.meta.env.VITE_HF_TOKEN as string,
   dangerouslyAllowBrowser: true,
 });
 
@@ -88,9 +90,10 @@ async function gradeOpenAnswer(
   userAnswer: string,
 ): Promise<{ correct: boolean; feedback: string }> {
   try {
-    const resp = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
+    const resp = await hfClient.chat.completions.create({
+      model: AI_PROVIDER.model,
       max_tokens: 150,
+      temperature: 0.3,
       messages: [
         {
           role: 'user',
@@ -101,9 +104,8 @@ Reply with only valid JSON: { "correct": boolean, "feedback": string }`,
         },
       ],
     });
-    const block = resp.content[0];
-    if (block.type !== 'text') throw new Error('unexpected block type');
-    return JSON.parse(block.text) as { correct: boolean; feedback: string };
+    const text = resp.choices[0]?.message?.content ?? '';
+    return JSON.parse(text) as { correct: boolean; feedback: string };
   } catch {
     return {
       correct: true,

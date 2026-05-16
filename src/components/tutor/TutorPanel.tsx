@@ -13,7 +13,7 @@ interface Props {
   activeMod: Module | null;
 }
 
-const HAS_API_KEY = Boolean(import.meta.env.VITE_ANTHROPIC_API_KEY);
+const HAS_API_KEY = Boolean(import.meta.env.VITE_HF_TOKEN);
 
 export function TutorPanel({ activeLesson, activeMod }: Props) {
   const { state } = useApp();
@@ -58,10 +58,11 @@ export function TutorPanel({ activeLesson, activeMod }: Props) {
       {!HAS_API_KEY && (
         <div className={styles.apiKeyBanner} role="alert">
           <p className={styles.apiKeyBannerText}>
-            Add your Anthropic API key to{' '}
+            Add your HuggingFace token to{' '}
             <code className={styles.apiKeyBannerCode}>.env</code> as{' '}
-            <code className={styles.apiKeyBannerCode}>VITE_ANTHROPIC_API_KEY</code> to
-            enable the AI tutor.
+            <code className={styles.apiKeyBannerCode}>VITE_HF_TOKEN</code> to enable the
+            AI tutor. Get a free token at huggingface.co/settings/tokens — enable
+            the &ldquo;Make calls to Inference Providers&rdquo; permission.
           </p>
         </div>
       )}

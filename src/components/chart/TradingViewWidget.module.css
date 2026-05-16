@@ -10,6 +10,25 @@
   height: 100%;
 }
 
+/* ── Loading overlay ── */
+
+.loadingOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(10, 12, 15, 0.7);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.loadingText {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
 /* ── Error state ── */
 
 .error {
@@ -31,6 +50,8 @@
 .errorText {
   font-size: 13px;
   color: var(--muted);
+  text-align: center;
+  max-width: 300px;
 }
 
 .reloadBtn {

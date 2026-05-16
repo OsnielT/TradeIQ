@@ -1,0 +1,34 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TradeIQ" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - navigation "Main navigation" [ref=e7]:
+        - link "Learn" [ref=e8] [cursor=pointer]:
+          - /url: /learn
+        - link "Curriculum" [ref=e9] [cursor=pointer]:
+          - /url: /curriculum
+    - generic [ref=e10]:
+      - combobox "User level" [ref=e11] [cursor=pointer]:
+        - option "Beginner"
+        - option "Intermediate" [selected]
+        - option "Advanced"
+      - generic "10 XP earned" [ref=e12]:
+        - generic [ref=e13]: "10"
+        - generic [ref=e14]: XP
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: How Markets Work — Lesson Quiz
+        - generic [ref=e21]: 4/4
+        - generic [ref=e43]: 3/3
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: Open answer
+        - paragraph [ref=e26]: In your own words, what is "price discovery" and why does it matter to traders?
+        - generic [ref=e71]:
+          - textbox "Type your answer…" [ref=e72]
+          - button "Submit Answer" [disabled] [ref=e73]
+  - contentinfo [ref=e40]:
+    - paragraph [ref=e41]:
+      - strong [ref=e42]: Educational purposes only.
+      - text: TradeIQ is not a financial advisor. Nothing on this platform constitutes financial, investment, or trading advice. All examples are for educational purposes only. Trading involves significant risk of loss and may not be suitable for all investors.

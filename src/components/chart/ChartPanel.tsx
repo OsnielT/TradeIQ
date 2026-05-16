@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { useApp } from '../../context/AppContext.tsx';
-import { DEFAULT_STUDIES } from '../../hooks/useTradingView.ts';
 import { TickerInput } from './TickerInput.tsx';
 import { TimeframePills } from './TimeframePills.tsx';
 import { TradingViewWidget } from './TradingViewWidget.tsx';
@@ -12,13 +10,6 @@ const CHART_TYPES = [
   { value: 'bar', label: 'Bars' },
 ] as const;
 
-const INDICATORS = [
-  { id: 'MASimple@tv-scriptwiz', label: 'MA' },
-  { id: 'RSI@tv-scriptwiz', label: 'RSI' },
-  { id: 'MACD@tv-scriptwiz', label: 'MACD' },
-  { id: 'Volume@tv-scriptwiz', label: 'Vol' },
-];
-
 interface Props {
   lessonTitle?: string;
   moduleName?: string;
@@ -26,13 +17,6 @@ interface Props {
 
 export function ChartPanel({ lessonTitle, moduleName }: Props) {
   const { state, dispatch } = useApp();
-  const [activeStudies, setActiveStudies] = useState<string[]>(DEFAULT_STUDIES);
-
-  function toggleIndicator(id: string) {
-    setActiveStudies((prev) =>
-      prev.includes(id) ? prev.filter((s) => s !== id) : [...prev, id],
-    );
-  }
 
   return (
     <div className={styles.panel}>
@@ -73,26 +57,8 @@ export function ChartPanel({ lessonTitle, moduleName }: Props) {
         </div>
       </div>
 
-      {/* Indicator chip bar */}
-      <div className={styles.indicatorBar} aria-label="Active indicators">
-        <span className={styles.indLabel} aria-hidden="true">
-          Indicators
-        </span>
-        {INDICATORS.map((ind) => (
-          <button
-            key={ind.id}
-            className={`${styles.indChip}${activeStudies.includes(ind.id) ? ` ${styles.indChipActive}` : ''}`}
-            onClick={() => toggleIndicator(ind.id)}
-            aria-pressed={activeStudies.includes(ind.id)}
-            aria-label={`Toggle ${ind.label} indicator`}
-          >
-            {ind.label}
-          </button>
-        ))}
-      </div>
-
-      {/* TradingView widget — fills remaining space */}
-      <TradingViewWidget studies={activeStudies} />
+      {/* Chart — fills remaining space */}
+      <TradingViewWidget />
     </div>
   );
 }

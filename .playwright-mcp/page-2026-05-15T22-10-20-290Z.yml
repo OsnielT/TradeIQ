@@ -1,0 +1,25 @@
+- generic [ref=e4]:
+  - generic [ref=e5]: AI Trading Education
+  - heading "Learn to trade. On real charts." [level=1] [ref=e6]:
+    - text: Learn to trade.
+    - text: On real charts.
+  - paragraph [ref=e7]: TradeIQ pairs a live market chart with an AI tutor — 44 lessons across 6 modules, structured quizzes, and real examples on the tickers you care about.
+  - generic [ref=e8]:
+    - paragraph [ref=e9]: What's your experience level?
+    - radiogroup "Experience level" [ref=e10]:
+      - radio "Complete Beginner I've never traded or read a chart before" [checked] [ref=e11] [cursor=pointer]:
+        - generic [ref=e12]: Complete Beginner
+        - generic [ref=e13]: I've never traded or read a chart before
+      - radio "Some Experience I know basic concepts but want structured learning" [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]: Some Experience
+        - generic [ref=e16]: I know basic concepts but want structured learning
+      - radio "I've Traded Before I want to deepen strategy, options, and risk management" [ref=e17] [cursor=pointer]:
+        - generic [ref=e18]: I've Traded Before
+        - generic [ref=e19]: I want to deepen strategy, options, and risk management
+  - generic [ref=e20]:
+    - button "Start Learning →" [ref=e21] [cursor=pointer]
+    - button "Browse Curriculum" [ref=e22] [cursor=pointer]
+  - generic "Course overview" [ref=e23]:
+    - generic [ref=e24]: 44lessons
+    - generic [ref=e26]: 6modules
+    - generic [ref=e28]: AItutor included

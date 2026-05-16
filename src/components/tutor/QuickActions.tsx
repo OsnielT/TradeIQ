@@ -2,24 +2,34 @@ import styles from './QuickActions.module.css';
 
 const ACTIONS = [
   {
-    label: 'Explain chart',
+    label: 'Draw the trend',
     prompt:
-      'Describe the current chart for me — explain the trend, key levels, and what stands out.',
+      'Draw trendlines on this chart showing me the current trend direction. Explain what you see.',
+  },
+  {
+    label: 'Key levels',
+    prompt:
+      'Identify and draw the key support and resistance levels on this chart.',
   },
   {
     label: 'Trade setup',
     prompt:
-      'Give me a hypothetical swing trade setup on this chart as an educational example.',
+      'Show me a hypothetical swing trade setup on this chart with entry/exit levels drawn.',
   },
   {
-    label: 'Last candle',
+    label: 'Explain chart',
     prompt:
-      'Explain the most recent candle on this chart and what it tells us about price action.',
+      'Describe what this chart is telling us — the trend, momentum, and anything that stands out.',
+  },
+  {
+    label: 'Pattern check',
+    prompt:
+      'Are there any chart patterns forming on this chart? Draw them if you see any.',
   },
   {
     label: 'Quiz me',
     prompt:
-      'Give me a quick trading question based on what I have learned so far.',
+      'Give me a quick trading question based on what I can see on this chart right now.',
   },
 ] as const;
 

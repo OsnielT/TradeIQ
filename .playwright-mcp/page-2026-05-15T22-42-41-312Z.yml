@@ -1,0 +1,230 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TradeIQ" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - navigation "Main navigation" [ref=e7]:
+        - link "Learn" [ref=e8] [cursor=pointer]:
+          - /url: /learn
+        - link "Curriculum" [ref=e9] [cursor=pointer]:
+          - /url: /curriculum
+    - generic [ref=e10]:
+      - combobox "User level" [ref=e11] [cursor=pointer]:
+        - option "Beginner"
+        - option "Intermediate" [selected]
+        - option "Advanced"
+      - generic "185 XP earned" [ref=e12]:
+        - generic [ref=e13]: "185"
+        - generic [ref=e14]: XP
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: How Markets Work
+          - generic [ref=e20]: Fundamentals
+        - generic [ref=e21]:
+          - search "Ticker symbol" [ref=e22]:
+            - textbox "Enter ticker symbol" [ref=e23]:
+              - /placeholder: Symbol
+              - text: AMEX:SPY
+            - button "Load ticker" [ref=e24] [cursor=pointer]: Go
+          - group "Timeframe" [ref=e26]:
+            - button "1m timeframe" [ref=e27] [cursor=pointer]: 1m
+            - button "5m timeframe" [ref=e28] [cursor=pointer]: 5m
+            - button "15m timeframe" [ref=e29] [cursor=pointer]: 15m
+            - button "1H timeframe" [ref=e30] [cursor=pointer]: 1H
+            - button "4H timeframe" [ref=e31] [cursor=pointer]: 4H
+            - button "1D timeframe" [pressed] [ref=e32] [cursor=pointer]: 1D
+            - button "1W timeframe" [ref=e33] [cursor=pointer]: 1W
+          - group "Chart type" [ref=e35]:
+            - button "Candles chart type" [pressed] [ref=e36] [cursor=pointer]: Candles
+            - button "Line chart type" [ref=e37] [cursor=pointer]: Line
+            - button "Bars chart type" [ref=e38] [cursor=pointer]: Bars
+        - generic "Active indicators" [ref=e39]:
+          - generic [ref=e40]: Indicators
+          - button "Toggle MA indicator" [pressed] [ref=e41] [cursor=pointer]: MA
+          - button "Toggle RSI indicator" [pressed] [ref=e42] [cursor=pointer]: RSI
+          - button "Toggle MACD indicator" [pressed] [ref=e43] [cursor=pointer]: MACD
+          - button "Toggle Vol indicator" [ref=e44] [cursor=pointer]: Vol
+        - iframe [ref=e48]:
+          - generic [ref=f2e2]:
+            - toolbar [ref=f2e6]:
+              - generic [ref=f2e10]:
+                - generic [ref=f2e12]:
+                  - radiogroup [ref=f2e13]:
+                    - radio "1 minute" [disabled] [ref=f2e14]:
+                      - generic [ref=f2e16]: 1m
+                    - radio "30 minutes" [disabled] [ref=f2e17]:
+                      - generic [ref=f2e19]: 30m
+                    - radio "1 hour" [disabled] [ref=f2e20]:
+                      - generic [ref=f2e22]: 1h
+                    - radio "1 day" [checked] [ref=f2e23]:
+                      - generic [ref=f2e25]: D
+                  - button "Chart interval" [ref=f2e26]:
+                    - img [ref=f2e29]:
+                      - img [ref=f2e30]
+                - generic [ref=f2e35]:
+                  - radiogroup [ref=f2e36]:
+                    - radio "Bars" [disabled] [ref=f2e37]:
+                      - img [ref=f2e38]:
+                        - img [ref=f2e39]
+                    - radio "Candles" [checked] [disabled] [ref=f2e41]:
+                      - img [ref=f2e42]:
+                        - img [ref=f2e43]
+                    - radio "Area" [disabled] [ref=f2e48]:
+                      - img [ref=f2e49]:
+                        - img [ref=f2e50]
+                  - button "Bar's style" [ref=f2e52]:
+                    - img [ref=f2e55]:
+                      - img [ref=f2e56]
+                - button "Compare symbols" [ref=f2e61]:
+                  - img [ref=f2e62]:
+                    - img [ref=f2e63]
+                - button "Indicators, metrics, and strategies" [ref=f2e70]:
+                  - img [ref=f2e71]:
+                    - img [ref=f2e72]
+                  - generic [ref=f2e75]: Indicators
+            - toolbar [ref=f2e78]:
+              - generic [ref=f2e82]:
+                - generic [ref=f2e83]:
+                  - generic [ref=f2e86]:
+                    - button "Cross" [ref=f2e88]:
+                      - img [ref=f2e89]:
+                        - img [ref=f2e90]
+                    - button "Cursors" [pressed] [ref=f2e94]:
+                      - img [ref=f2e95]:
+                        - img [ref=f2e96]
+                  - generic [ref=f2e100]:
+                    - button "Trendline" [ref=f2e102]:
+                      - img [ref=f2e103]:
+                        - img [ref=f2e104]
+                    - button "Trend tools" [ref=f2e108]:
+                      - img [ref=f2e109]:
+                        - img [ref=f2e110]
+                  - generic [ref=f2e114]:
+                    - button "Fib retracement" [ref=f2e116]:
+                      - img [ref=f2e117]:
+                        - img [ref=f2e118]
+                    - button "Gann and Fibonacci tools" [ref=f2e125]:
+                      - img [ref=f2e126]:
+                        - img [ref=f2e127]
+                  - generic [ref=f2e131]:
+                    - button "XABCD pattern" [ref=f2e133]:
+                      - img [ref=f2e134]:
+                        - img [ref=f2e135]
+                    - button "Patterns" [ref=f2e139]:
+                      - img [ref=f2e140]:
+                        - img [ref=f2e141]
+                  - generic [ref=f2e145]:
+                    - button "Long position" [ref=f2e147]:
+                      - img [ref=f2e148]:
+                        - img [ref=f2e149]
+                    - button "Forecasting and measurement tools" [ref=f2e151]:
+                      - img [ref=f2e152]:
+                        - img [ref=f2e153]
+                  - generic [ref=f2e157]:
+                    - button "Brush" [ref=f2e159]:
+                      - img [ref=f2e160]:
+                        - img [ref=f2e161]
+                    - button "Geometric shapes" [ref=f2e165]:
+                      - img [ref=f2e166]:
+                        - img [ref=f2e167]
+                  - generic [ref=f2e171]:
+                    - button "Text" [ref=f2e173]:
+                      - img [ref=f2e174]:
+                        - img [ref=f2e175]
+                    - button "Annotation tools" [ref=f2e177]:
+                      - img [ref=f2e178]:
+                        - img [ref=f2e179]
+                  - generic [ref=f2e182]:
+                    - button "Icon" [ref=f2e184]:
+                      - img [ref=f2e185]:
+                        - img [ref=f2e186]
+                    - button "Icons" [ref=f2e188]:
+                      - img [ref=f2e189]:
+                        - img [ref=f2e190]
+                - generic [ref=f2e192]:
+                  - button "Measure" [ref=f2e193]:
+                    - img [ref=f2e194]:
+                      - img [ref=f2e195]
+                  - button "Zoom in" [ref=f2e197]:
+                    - img [ref=f2e198]:
+                      - img [ref=f2e199]
+                - generic [ref=f2e207]:
+                  - button "Magnet mode snaps drawings placed near price bars to the closest OHLC value" [ref=f2e209]:
+                    - img [ref=f2e210]:
+                      - img [ref=f2e211]
+                  - button "Magnets" [ref=f2e215]:
+                    - img [ref=f2e216]:
+                      - img [ref=f2e217]
+            - generic [ref=f2e220]:
+              - 'region "Chart #1" [ref=f2e223]':
+                - generic [ref=f2e227]:
+                  - generic:
+                    - generic:
+                      - toolbar:
+                        - generic:
+                          - generic [ref=f2e228]:
+                            - generic [ref=f2e229]:
+                              - generic [ref=f2e232]: S
+                              - generic [ref=f2e233]: AMEX:SPY
+                            - generic "Change interval" [ref=f2e234]:
+                              - text: ·
+                              - button "Change interval" [ref=f2e235]: 1D
+                          - generic:
+                            - generic:
+                              - button "More":
+                                - generic:
+                                  - img
+                        - generic [ref=f2e237]:
+                          - generic [ref=f2e238]:
+                            - generic [ref=f2e239]: O
+                            - generic [ref=f2e240]: ∅
+                          - generic [ref=f2e241]:
+                            - generic [ref=f2e242]: H
+                            - generic [ref=f2e243]: ∅
+                          - generic [ref=f2e244]:
+                            - generic [ref=f2e245]: L
+                            - generic [ref=f2e246]: ∅
+                          - generic [ref=f2e247]:
+                            - generic [ref=f2e248]: C
+                            - generic [ref=f2e249]: ∅
+                          - generic [ref=f2e251]: ∅ (∅%)
+                  - generic "Chart for AMEX:SPY, 1 day" [ref=f2e253]
+              - toolbar [ref=f2e267]
+      - generic "AI Tutor" [ref=e49]:
+        - generic [ref=e51]:
+          - 'generic "Level: intermediate" [ref=e52]': intermediate
+          - generic [ref=e53]: How Markets Work
+        - alert [ref=e54]:
+          - paragraph [ref=e55]:
+            - text: Add your Anthropic API key to
+            - code [ref=e56]: .env
+            - text: as
+            - code [ref=e57]: VITE_ANTHROPIC_API_KEY
+            - text: to enable the AI tutor.
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - generic [ref=e60]: How Markets Work
+            - generic "Lesson complete" [ref=e61]: ✓ Complete
+          - progressbar "Lesson progress" [ref=e62]
+          - generic [ref=e64]:
+            - generic [ref=e65]: 1 exchange
+            - button "Take quiz for How Markets Work" [ref=e66] [cursor=pointer]: Take Quiz →
+        - log "Chat messages" [ref=e67]:
+          - generic [ref=e69]: Begin the lesson.
+          - generic [ref=e71]: API key error — check that VITE_ANTHROPIC_API_KEY is set in your .env file.
+        - generic "Quick actions" [ref=e72]:
+          - button "Explain chart" [disabled] [ref=e73]
+          - button "Trade setup" [disabled] [ref=e74]
+          - button "Last candle" [disabled] [ref=e75]
+          - button "Quiz me" [disabled] [ref=e76]
+        - generic [ref=e77]:
+          - textbox "Message input" [disabled] [ref=e78]:
+            - /placeholder: Ask about trading, charts, or this lesson…
+          - button "Send message" [disabled] [ref=e79]:
+            - img [ref=e80]
+  - contentinfo [ref=e83]:
+    - paragraph [ref=e84]:
+      - strong [ref=e85]: Educational purposes only.
+      - text: TradeIQ is not a financial advisor. Nothing on this platform constitutes financial, investment, or trading advice. All examples are for educational purposes only. Trading involves significant risk of loss and may not be suitable for all investors.

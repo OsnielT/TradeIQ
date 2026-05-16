@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "hf-mcp-server": {
+      "url": "https://huggingface.co/mcp?login",
+      "autoApprove": [
+        "hf_doc_search",
+        "hf_hub_query",
+        "hub_repo_details"
+      ]
+    }
+  }
+}

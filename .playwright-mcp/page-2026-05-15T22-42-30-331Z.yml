@@ -1,0 +1,84 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TradeIQ" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - navigation "Main navigation" [ref=e7]:
+        - link "Learn" [ref=e8] [cursor=pointer]:
+          - /url: /learn
+        - link "Curriculum" [ref=e9] [cursor=pointer]:
+          - /url: /curriculum
+    - generic [ref=e10]:
+      - combobox "User level" [ref=e11] [cursor=pointer]:
+        - option "Beginner"
+        - option "Intermediate" [selected]
+        - option "Advanced"
+      - generic "185 XP earned" [ref=e12]:
+        - generic [ref=e13]: "185"
+        - generic [ref=e14]: XP
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: How Markets Work
+          - generic [ref=e20]: Fundamentals
+        - generic [ref=e21]:
+          - search "Ticker symbol" [ref=e22]:
+            - textbox "Enter ticker symbol" [ref=e23]:
+              - /placeholder: Symbol
+              - text: AMEX:SPY
+            - button "Load ticker" [ref=e24] [cursor=pointer]: Go
+          - group "Timeframe" [ref=e26]:
+            - button "1m timeframe" [ref=e27] [cursor=pointer]: 1m
+            - button "5m timeframe" [ref=e28] [cursor=pointer]: 5m
+            - button "15m timeframe" [ref=e29] [cursor=pointer]: 15m
+            - button "1H timeframe" [ref=e30] [cursor=pointer]: 1H
+            - button "4H timeframe" [ref=e31] [cursor=pointer]: 4H
+            - button "1D timeframe" [pressed] [ref=e32] [cursor=pointer]: 1D
+            - button "1W timeframe" [ref=e33] [cursor=pointer]: 1W
+          - group "Chart type" [ref=e35]:
+            - button "Candles chart type" [pressed] [ref=e36] [cursor=pointer]: Candles
+            - button "Line chart type" [ref=e37] [cursor=pointer]: Line
+            - button "Bars chart type" [ref=e38] [cursor=pointer]: Bars
+        - generic "Active indicators" [ref=e39]:
+          - generic [ref=e40]: Indicators
+          - button "Toggle MA indicator" [pressed] [ref=e41] [cursor=pointer]: MA
+          - button "Toggle RSI indicator" [pressed] [ref=e42] [cursor=pointer]: RSI
+          - button "Toggle MACD indicator" [pressed] [ref=e43] [cursor=pointer]: MACD
+          - button "Toggle Vol indicator" [ref=e44] [cursor=pointer]: Vol
+      - generic "AI Tutor" [ref=e47]:
+        - generic [ref=e49]:
+          - 'generic "Level: intermediate" [ref=e50]': intermediate
+          - generic [ref=e51]: How Markets Work
+        - alert [ref=e52]:
+          - paragraph [ref=e53]:
+            - text: Add your Anthropic API key to
+            - code [ref=e54]: .env
+            - text: as
+            - code [ref=e55]: VITE_ANTHROPIC_API_KEY
+            - text: to enable the AI tutor.
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]: How Markets Work
+            - generic "Lesson complete" [ref=e59]: ✓ Complete
+          - progressbar "Lesson progress" [ref=e60]
+          - generic [ref=e62]:
+            - generic [ref=e63]: 1 exchange
+            - button "Take quiz for How Markets Work" [ref=e64] [cursor=pointer]: Take Quiz →
+        - log "Chat messages" [ref=e65]:
+          - generic [ref=e67]: Begin the lesson.
+          - generic [ref=e69]: API key error — check that VITE_ANTHROPIC_API_KEY is set in your .env file.
+        - generic "Quick actions" [ref=e70]:
+          - button "Explain chart" [disabled] [ref=e71]
+          - button "Trade setup" [disabled] [ref=e72]
+          - button "Last candle" [disabled] [ref=e73]
+          - button "Quiz me" [disabled] [ref=e74]
+        - generic [ref=e75]:
+          - textbox "Message input" [disabled] [ref=e76]:
+            - /placeholder: Ask about trading, charts, or this lesson…
+          - button "Send message" [disabled] [ref=e77]:
+            - img [ref=e78]
+  - contentinfo [ref=e81]:
+    - paragraph [ref=e82]:
+      - strong [ref=e83]: Educational purposes only.
+      - text: TradeIQ is not a financial advisor. Nothing on this platform constitutes financial, investment, or trading advice. All examples are for educational purposes only. Trading involves significant risk of loss and may not be suitable for all investors.
